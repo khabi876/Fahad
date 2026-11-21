@@ -1,0 +1,6 @@
+{
+  "name": "Happy Birthday Fahad",
+  "description": "A nocturnal pyrotechnic celebration and Urdu literary tribute for Fahad — belated wishes crafted with animated fireworks, crackers, and heartfelt Urdu quotes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
