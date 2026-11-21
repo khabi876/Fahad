@@ -52,10 +52,10 @@ export function UrduQuotesSection({ onSendSalute }: UrduQuotesSectionProps) {
   };
 
   return (
-    <section id="urdu-quotes" className="relative z-10 mx-auto max-w-6xl px-6 py-24">
+    <section id="urdu-quotes" className="relative z-10 mx-auto max-w-6xl px-6 py-24 [text-shadow:0_2px_10px_rgba(7,8,13,0.95)]">
       {/* Editorial Calligraphy Banner */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-12">
-        <div className="lg:col-span-7 flex flex-col justify-between rounded-xl border border-white/10 bg-[#0E1017]/85 p-8 backdrop-blur-md">
+        <div className="lg:col-span-7 flex flex-col justify-between rounded-xl border border-white/15 bg-transparent p-8">
           <div>
             <p className="text-xs font-medium tracking-widest uppercase text-[#E5A93C]">
               Alfaz-e-Dua · Urdu Couplets &amp; Quotes
@@ -68,7 +68,7 @@ export function UrduQuotesSection({ onSendSalute }: UrduQuotesSectionProps) {
             </p>
           </div>
 
-          <div className="mt-8 flex flex-wrap items-center gap-1.5 rounded-lg bg-[#131620] p-1.5 w-fit border border-white/10">
+          <div className="mt-8 flex flex-wrap items-center gap-1.5 rounded-lg bg-transparent p-1.5 w-fit border border-white/15">
             {FILTERS.map((f) => (
               <button
                 key={f.id}
@@ -76,7 +76,7 @@ export function UrduQuotesSection({ onSendSalute }: UrduQuotesSectionProps) {
                 onClick={() => setActiveFilter(f.id)}
                 className={`px-3.5 py-2 text-xs font-medium rounded-md transition-colors whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E5A93C] ${
                   activeFilter === f.id
-                    ? 'bg-[#E5A93C] text-[#07080D]'
+                    ? 'bg-[#E5A93C] text-[#07080D] [text-shadow:none]'
                     : 'text-[#B8B2A6] hover:text-[#F5F2EB]'
                 }`}
               >
@@ -87,24 +87,24 @@ export function UrduQuotesSection({ onSendSalute }: UrduQuotesSectionProps) {
         </div>
 
         <figure className="lg:col-span-5 flex flex-col">
-          <div className="relative flex-1 overflow-hidden rounded-xl border border-white/10 bg-[#131620] min-h-[240px]">
+          <div className="relative flex-1 overflow-hidden rounded-xl border border-white/15 bg-transparent min-h-[240px]">
             {!imgError ? (
               <img
                 src="/src/assets/images/urdu_qalam_desk_1795263109771.jpg"
                 alt="Traditional bamboo reed qalam pen, brass inkwell, and parchment paper under warm lantern light"
                 referrerPolicy="no-referrer"
                 onError={() => setImgError(true)}
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover opacity-85"
               />
             ) : (
-              <div className="flex h-full w-full flex-col items-center justify-center bg-gradient-to-br from-[#191612] to-[#0E1017] p-8 text-center">
+              <div className="flex h-full w-full flex-col items-center justify-center bg-transparent p-8 text-center">
                 <span className="font-urdu text-2xl text-[#E5A93C]" dir="rtl" lang="ur">
                   الفاظِ دعا
                 </span>
                 <span className="mt-2 text-xs text-[#A6A095]">Calligraphy &amp; Parchment</span>
               </div>
             )}
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#07080D]/80 via-transparent to-transparent" />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#07080D]/60 via-transparent to-transparent" />
           </div>
           <figcaption className="mt-2.5 text-xs italic text-[#A6A095]">
             Fig. 2 — Traditional reed qalam &amp; parchment, in honour of Urdu verse.
@@ -120,10 +120,10 @@ export function UrduQuotesSection({ onSendSalute }: UrduQuotesSectionProps) {
           return (
             <article
               key={quote.id}
-              className={`flex flex-col justify-between rounded-xl border p-7 backdrop-blur-md transition-colors duration-200 ${
+              className={`flex flex-col justify-between rounded-xl border p-7 bg-transparent transition-colors duration-200 ${
                 isSaluted
-                  ? 'border-[#E5A93C]/65 bg-[#171A24]/95'
-                  : 'border-white/10 bg-[#0E1017]/85 hover:border-white/20'
+                  ? 'border-[#E5A93C]/75'
+                  : 'border-white/15 hover:border-white/30'
               }`}
             >
               <div>
@@ -145,7 +145,7 @@ export function UrduQuotesSection({ onSendSalute }: UrduQuotesSectionProps) {
                   {quote.urdu}
                 </p>
 
-                <div className="my-5 h-px w-full bg-white/10" />
+                <div className="my-5 h-px w-full bg-white/15" />
 
                 <p className="text-sm italic text-[#D6D0C4] leading-relaxed">
                   “{quote.roman}”
@@ -155,11 +155,11 @@ export function UrduQuotesSection({ onSendSalute }: UrduQuotesSectionProps) {
                 </p>
               </div>
 
-              <div className="mt-6 flex items-center justify-between gap-3 pt-4 border-t border-white/10">
+              <div className="mt-6 flex items-center justify-between gap-3 pt-4 border-t border-white/15">
                 <button
                   type="button"
                   onClick={() => handleSalute(quote)}
-                  className="inline-flex items-center gap-2 rounded-md border border-[#E5A93C]/35 bg-[#E5A93C]/10 px-3.5 py-2 text-xs font-medium text-[#F3C669] hover:bg-[#E5A93C]/20 transition-colors whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E5A93C]"
+                  className="inline-flex items-center gap-2 rounded-md border border-[#E5A93C]/45 bg-transparent px-3.5 py-2 text-xs font-medium text-[#F3C669] hover:bg-[#E5A93C]/15 transition-colors whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E5A93C]"
                 >
                   <Sparkles className="h-3.5 w-3.5" />
                   <span>{isSaluted ? 'Salute Fired' : 'Firework Salute'}</span>
@@ -168,7 +168,7 @@ export function UrduQuotesSection({ onSendSalute }: UrduQuotesSectionProps) {
                 <button
                   type="button"
                   onClick={() => handleCopy(quote)}
-                  className="inline-flex items-center gap-1.5 rounded-md border border-white/10 bg-white/5 px-3.5 py-2 text-xs font-medium text-[#B8B2A6] hover:text-[#F5F2EB] hover:border-white/25 transition-colors whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E5A93C]"
+                  className="inline-flex items-center gap-1.5 rounded-md border border-white/15 bg-transparent px-3.5 py-2 text-xs font-medium text-[#B8B2A6] hover:text-[#F5F2EB] hover:border-white/30 transition-colors whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E5A93C]"
                 >
                   {isCopied ? (
                     <>

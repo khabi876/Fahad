@@ -5,7 +5,7 @@ interface HeaderProps {
 
 export function Header({ onLaunchFinale, onNavigateHome }: HeaderProps) {
   return (
-    <header className="sticky top-0 z-40 border-b border-white/10 bg-[#07080D]/80 backdrop-blur-md">
+    <header className="sticky top-0 z-40 border-b border-white/10 bg-[#07080D]/25 backdrop-blur-[2px] [text-shadow:0_1px_8px_rgba(7,8,13,0.95)]">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-8 px-6 py-3.5">
         {/* Zone 1: Single-line Wordmark */}
         <a

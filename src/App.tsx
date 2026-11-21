@@ -115,7 +115,7 @@ export default function App() {
           {/* Hero Section — pointers fall through empty sky to canvas */}
           <section className="mx-auto max-w-6xl px-6 pt-16 pb-20 sm:pt-24 sm:pb-28">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
-              <div className="pointer-events-auto lg:col-span-7 flex flex-col justify-center rounded-xl border border-white/10 bg-[#07080D]/65 p-8 sm:p-12 backdrop-blur-sm">
+              <div className="pointer-events-auto lg:col-span-7 flex flex-col justify-center rounded-xl border border-white/15 bg-transparent p-8 sm:p-12 [text-shadow:0_2px_12px_rgba(7,8,13,0.95)]">
                 <p className="text-xs font-medium tracking-widest uppercase text-[#E5A93C]">
                   Belated Birthday Tribute · November 2026
                 </p>
@@ -140,14 +140,14 @@ export default function App() {
                   <button
                     type="button"
                     onClick={handleLaunchFinale}
-                    className="rounded-md bg-[#E5A93C] px-6 py-3 text-sm font-semibold text-[#07080D] hover:bg-[#F3C669] active:scale-[0.98] transition-all duration-150 whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F5F2EB]"
+                    className="rounded-md bg-[#E5A93C] px-6 py-3 text-sm font-semibold text-[#07080D] hover:bg-[#F3C669] active:scale-[0.98] transition-all duration-150 whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F5F2EB] [text-shadow:none]"
                   >
                     Ignite Grand Finale
                   </button>
 
                   <a
                     href="#the-note"
-                    className="rounded-md border border-white/20 bg-white/5 px-5 py-3 text-sm font-medium text-[#F5F2EB] hover:border-white/35 hover:bg-white/10 transition-colors whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E5A93C]"
+                    className="rounded-md border border-white/25 bg-transparent px-5 py-3 text-sm font-medium text-[#F5F2EB] hover:border-white/45 hover:bg-white/5 transition-colors whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E5A93C]"
                   >
                     Read Late-Wish Note
                   </a>
@@ -155,7 +155,7 @@ export default function App() {
                   <button
                     type="button"
                     onClick={handleToggleSound}
-                    className="inline-flex items-center gap-2 rounded-md border border-white/15 bg-transparent px-4 py-3 text-xs font-medium text-[#B8B2A6] hover:text-[#F5F2EB] transition-colors whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E5A93C]"
+                    className="inline-flex items-center gap-2 rounded-md border border-white/20 bg-transparent px-4 py-3 text-xs font-medium text-[#B8B2A6] hover:text-[#F5F2EB] transition-colors whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E5A93C]"
                   >
                     {soundEnabled ? (
                       <Volume2 className="h-4 w-4 text-[#E5A93C]" />
@@ -173,23 +173,23 @@ export default function App() {
 
               {/* Hero Visual Card */}
               <figure className="pointer-events-auto lg:col-span-5 flex flex-col">
-                <div className="relative flex-1 overflow-hidden rounded-xl border border-white/10 bg-[#131620] min-h-[280px]">
+                <div className="relative flex-1 overflow-hidden rounded-xl border border-white/15 bg-transparent min-h-[280px]">
                   {!heroImgError ? (
                     <img
                       src="/src/assets/images/hero_fahad_celebration_1795263108000.jpg"
                       alt="Golden handheld sparklers glowing warmly at midnight over a city skyline"
                       referrerPolicy="no-referrer"
                       onError={() => setHeroImgError(true)}
-                      className="h-full w-full object-cover"
+                      className="h-full w-full object-cover opacity-85"
                     />
                   ) : (
-                    <div className="flex h-full w-full flex-col items-center justify-center bg-gradient-to-br from-[#1B1610] to-[#0E1017] p-8 text-center">
+                    <div className="flex h-full w-full flex-col items-center justify-center bg-transparent p-8 text-center">
                       <span className="font-display text-3xl text-[#E5A93C]">Fahad · 2026</span>
                       <span className="mt-2 text-xs text-[#A6A095]">Midnight Sparkler Tribute</span>
                     </div>
                   )}
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#07080D]/80 via-[#07080D]/15 to-transparent" />
-                  <div className="absolute bottom-5 left-5 right-5">
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#07080D]/60 via-transparent to-transparent" />
+                  <div className="absolute bottom-5 left-5 right-5 [text-shadow:0_2px_10px_rgba(7,8,13,0.95)]">
                     <p className="font-display text-xl italic text-[#F5F2EB]">
                       “Better late than never — never less sincere.”
                     </p>
@@ -218,7 +218,7 @@ export default function App() {
       )}
 
       {/* Quiet Editorial Footer */}
-      <footer className="relative z-10 border-t border-white/10 bg-[#07080D]/85 backdrop-blur-md">
+      <footer className="relative z-10 border-t border-white/10 bg-transparent">
         <div className="mx-auto flex max-w-6xl flex-col sm:flex-row items-center justify-between gap-4 px-6 py-8 text-xs text-[#A6A095]">
           <div className="flex items-center gap-3">
             <span className="font-display text-base font-semibold text-[#F5F2EB]">Fahad</span>

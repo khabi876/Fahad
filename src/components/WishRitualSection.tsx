@@ -100,15 +100,15 @@ export function WishRitualSection({ onIgniteWish }: WishRitualSectionProps) {
   };
 
   return (
-    <section id="make-a-wish" className="relative z-10 mx-auto max-w-6xl px-6 py-24">
-      <div className="rounded-xl border border-white/10 bg-[#0E1017]/90 p-8 sm:p-12 backdrop-blur-md">
+    <section id="make-a-wish" className="relative z-10 mx-auto max-w-6xl px-6 py-24 [text-shadow:0_2px_10px_rgba(7,8,13,0.95)]">
+      <div className="rounded-xl border border-white/15 bg-transparent p-8 sm:p-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Left: Interactive Sparkler Visual */}
-          <div className="lg:col-span-5 flex flex-col items-center justify-center rounded-xl border border-white/10 bg-[#07080D] p-8 min-h-[300px] relative overflow-hidden">
+          <div className="lg:col-span-5 flex flex-col items-center justify-center rounded-xl border border-white/15 bg-transparent p-8 min-h-[300px] relative overflow-hidden">
             <div
               className={`transition-opacity duration-500 ${
-                sparklerLit ? 'opacity-100' : 'opacity-25'
-              } absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,rgba(229,169,60,0.28),transparent_65%)] pointer-events-none`}
+                sparklerLit ? 'opacity-100' : 'opacity-20'
+              } absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,rgba(229,169,60,0.22),transparent_65%)] pointer-events-none`}
             />
 
             <div className="relative h-56 w-52 flex items-center justify-center">
@@ -187,7 +187,7 @@ export function WishRitualSection({ onIgniteWish }: WishRitualSectionProps) {
                     value={wishText}
                     onChange={(e) => setWishText(e.target.value)}
                     placeholder="Write a birthday wish..."
-                    className="w-full rounded-lg border border-white/15 bg-[#07080D] px-4 py-3 text-sm text-[#F5F2EB] placeholder:text-[#6B665D] focus:border-[#E5A93C] focus:outline-none focus:ring-1 focus:ring-[#E5A93C]"
+                    className="w-full rounded-lg border border-white/20 bg-transparent px-4 py-3 text-sm text-[#F5F2EB] placeholder:text-[#6B665D] focus:border-[#E5A93C] focus:outline-none focus:ring-1 focus:ring-[#E5A93C]"
                   />
                 </div>
 
@@ -197,7 +197,7 @@ export function WishRitualSection({ onIgniteWish }: WishRitualSectionProps) {
                       key={idx}
                       type="button"
                       onClick={() => setWishText(preset)}
-                      className="rounded-md border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-[#B8B2A6] hover:border-white/25 hover:text-[#F5F2EB] transition-colors text-left cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E5A93C]"
+                      className="rounded-md border border-white/15 bg-transparent px-3 py-1.5 text-xs text-[#B8B2A6] hover:border-white/35 hover:text-[#F5F2EB] transition-colors text-left cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E5A93C]"
                     >
                       Preset {idx + 1}
                     </button>
@@ -206,14 +206,14 @@ export function WishRitualSection({ onIgniteWish }: WishRitualSectionProps) {
 
                 <button
                   type="submit"
-                  className="inline-flex items-center gap-2 rounded-md bg-[#E5A93C] px-6 py-3 text-sm font-semibold text-[#07080D] hover:bg-[#F3C669] active:scale-[0.98] transition-all duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F5F2EB]"
+                  className="inline-flex items-center gap-2 rounded-md bg-[#E5A93C] px-6 py-3 text-sm font-semibold text-[#07080D] hover:bg-[#F3C669] active:scale-[0.98] transition-all duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F5F2EB] [text-shadow:none]"
                 >
                   <Flame className="h-4 w-4" />
                   <span>Light the Sparkler</span>
                 </button>
               </form>
             ) : (
-              <div className="mt-6 rounded-xl border border-[#E5A93C]/35 bg-[#131620] p-6">
+              <div className="mt-6 rounded-xl border border-[#E5A93C]/40 bg-transparent p-6">
                 <div className="text-xs text-[#E5A93C]">Sealed Birthday Wish · Fahad</div>
                 <p className="mt-3 font-display text-2xl italic text-[#F5F2EB] leading-snug">
                   “{wishText}”

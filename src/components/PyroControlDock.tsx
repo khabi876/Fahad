@@ -59,8 +59,8 @@ export function PyroControlDock({
 }: PyroControlDockProps) {
   return (
     <section id="fireworks" className="relative z-10 mx-auto max-w-6xl px-6 py-24">
-      <div className="rounded-xl border border-white/10 bg-[#0E1017]/85 p-6 sm:p-10 backdrop-blur-md">
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between border-b border-white/10 pb-8">
+      <div className="rounded-xl border border-white/15 bg-transparent p-6 sm:p-10 [text-shadow:0_2px_10px_rgba(7,8,13,0.95)]">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between border-b border-white/15 pb-8">
           <div className="max-w-2xl">
             <p className="text-xs font-medium tracking-widest uppercase text-[#E5A93C]">
               Interactive Pyrotechnic Deck
@@ -86,8 +86,8 @@ export function PyroControlDock({
               onClick={onToggleAutoShow}
               className={`inline-flex items-center gap-2 rounded-md border px-4 py-2.5 text-xs font-medium transition-colors whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E5A93C] ${
                 autoShow
-                  ? 'border-[#E5A93C]/50 bg-[#E5A93C]/15 text-[#F5F2EB]'
-                  : 'border-white/15 bg-white/5 text-[#B8B2A6] hover:text-[#F5F2EB]'
+                  ? 'border-[#E5A93C]/60 bg-transparent text-[#F5F2EB]'
+                  : 'border-white/20 bg-transparent text-[#B8B2A6] hover:text-[#F5F2EB]'
               }`}
             >
               {autoShow ? <Pause className="h-3.5 w-3.5" /> : <Play className="h-3.5 w-3.5" />}
@@ -99,8 +99,8 @@ export function PyroControlDock({
               onClick={onToggleSound}
               className={`inline-flex items-center gap-2 rounded-md border px-4 py-2.5 text-xs font-medium transition-colors whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E5A93C] ${
                 soundEnabled
-                  ? 'border-[#E5A93C]/50 bg-[#E5A93C]/15 text-[#F5F2EB]'
-                  : 'border-white/15 bg-white/5 text-[#B8B2A6] hover:text-[#F5F2EB]'
+                  ? 'border-[#E5A93C]/60 bg-transparent text-[#F5F2EB]'
+                  : 'border-white/20 bg-transparent text-[#B8B2A6] hover:text-[#F5F2EB]'
               }`}
             >
               {soundEnabled ? <Volume2 className="h-3.5 w-3.5" /> : <VolumeX className="h-3.5 w-3.5" />}
@@ -115,7 +115,7 @@ export function PyroControlDock({
               key={item.type}
               type="button"
               onClick={() => onLaunchType(item.type)}
-              className="group flex flex-col justify-between rounded-lg border border-white/10 bg-[#131620]/90 p-5 text-left transition-all duration-150 hover:border-[#E5A93C]/55 hover:bg-[#171B27] active:scale-[0.99] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E5A93C]"
+              className="group flex flex-col justify-between rounded-lg border border-white/15 bg-transparent p-5 text-left transition-all duration-150 hover:border-[#E5A93C]/65 hover:bg-white/[0.04] active:scale-[0.99] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E5A93C]"
             >
               <div>
                 <div className="flex items-center justify-between gap-3">
@@ -134,21 +134,21 @@ export function PyroControlDock({
                   {item.subtitle}
                 </p>
               </div>
-              <div className="mt-4 pt-3 border-t border-white/5 text-xs font-medium text-[#E5A93C]">
+              <div className="mt-4 pt-3 border-t border-white/10 text-xs font-medium text-[#E5A93C]">
                 Ignite now
               </div>
             </button>
           ))}
         </div>
 
-        <div className="mt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 rounded-lg border border-[#E5A93C]/25 bg-[#E5A93C]/10 px-5 py-4">
+        <div className="mt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 rounded-lg border border-[#E5A93C]/35 bg-transparent px-5 py-4">
           <p className="text-sm text-[#F5F2EB]">
             Ready for the full nocturnal salute? Launch an 11-shell synchronized barrage with fountains and crackling patakhas.
           </p>
           <button
             type="button"
             onClick={onLaunchFinale}
-            className="px-5 py-2.5 text-xs font-semibold text-[#07080D] bg-[#E5A93C] hover:bg-[#F3C669] active:scale-[0.98] transition-all duration-150 rounded-md whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F5F2EB]"
+            className="px-5 py-2.5 text-xs font-semibold text-[#07080D] bg-[#E5A93C] hover:bg-[#F3C669] active:scale-[0.98] transition-all duration-150 rounded-md whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F5F2EB] [text-shadow:none]"
           >
             Ignite 11-Shell Finale
           </button>

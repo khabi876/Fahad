@@ -44,7 +44,7 @@ export function BelatedNoteSection({ onSealBroken }: BelatedNoteSectionProps) {
         </figure>
 
         {/* Right: Editorial Belated Apology & Tribute */}
-        <div className="lg:col-span-7 flex flex-col justify-between rounded-xl border border-white/10 bg-[#0E1017]/85 p-8 sm:p-10 backdrop-blur-md">
+        <div className="lg:col-span-7 flex flex-col justify-between rounded-xl border border-white/15 bg-transparent p-8 sm:p-10 [text-shadow:0_2px_10px_rgba(7,8,13,0.95)]">
           <div>
             <div className="flex items-center gap-2 text-xs text-[#A6A095]">
               <span className="text-[#E5A93C] font-medium uppercase tracking-widest">
@@ -68,7 +68,7 @@ export function BelatedNoteSection({ onSealBroken }: BelatedNoteSectionProps) {
             </div>
 
             {sealOpened && (
-              <div className="mt-6 rounded-lg border border-[#E5A93C]/30 bg-[#131620] p-6 transition-opacity duration-200">
+              <div className="mt-6 rounded-lg border border-[#E5A93C]/35 bg-transparent p-6 transition-opacity duration-200">
                 <p className="font-urdu text-right text-xl text-[#F3C669]" dir="rtl" lang="ur">
                   فہد، دیر سے سہی مگر دل سے سالگرہ مبارک — اللہ تمہیں ہمیشہ سلامت اور کامیاب رکھے۔
                 </p>

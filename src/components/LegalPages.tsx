@@ -6,8 +6,8 @@ interface LegalViewProps {
 export function LegalView({ route, onBackHome }: LegalViewProps) {
   if (route === '/404') {
     return (
-      <main className="relative z-10 mx-auto max-w-3xl px-6 py-32">
-        <div className="rounded-xl border border-white/10 bg-[#0E1017]/90 p-10 backdrop-blur-md">
+      <main className="relative z-10 mx-auto max-w-3xl px-6 py-32 [text-shadow:0_2px_10px_rgba(7,8,13,0.95)]">
+        <div className="rounded-xl border border-white/15 bg-transparent p-10">
           <p className="font-mono text-xs uppercase tracking-widest text-[#E5A93C]">404</p>
           <h1 className="mt-3 font-display text-4xl font-semibold text-[#F5F2EB]">
             Page Not Found
@@ -18,7 +18,7 @@ export function LegalView({ route, onBackHome }: LegalViewProps) {
           <button
             type="button"
             onClick={onBackHome}
-            className="mt-8 rounded-md bg-[#E5A93C] px-5 py-2.5 text-xs font-semibold text-[#07080D] hover:bg-[#F3C669] transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F5F2EB]"
+            className="mt-8 rounded-md bg-[#E5A93C] px-5 py-2.5 text-xs font-semibold text-[#07080D] hover:bg-[#F3C669] transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F5F2EB] [text-shadow:none]"
           >
             Back to Celebration
           </button>
@@ -30,8 +30,8 @@ export function LegalView({ route, onBackHome }: LegalViewProps) {
   const isPrivacy = route === '/privacy-policy';
 
   return (
-    <main className="relative z-10 mx-auto max-w-3xl px-6 py-24">
-      <article className="rounded-xl border border-white/10 bg-[#0E1017]/90 p-8 sm:p-10 backdrop-blur-md">
+    <main className="relative z-10 mx-auto max-w-3xl px-6 py-24 [text-shadow:0_2px_10px_rgba(7,8,13,0.95)]">
+      <article className="rounded-xl border border-white/15 bg-transparent p-8 sm:p-10">
         <p className="text-xs uppercase tracking-widest text-[#E5A93C]">Notice</p>
         <h1 className="mt-2 font-display text-4xl font-semibold text-[#F5F2EB]">
           {isPrivacy ? 'Privacy Policy' : 'Terms & Conditions'}
